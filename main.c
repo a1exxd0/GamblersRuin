@@ -26,12 +26,24 @@ double* gambler(int n){
     return arr;
 }
 
+
+/**
+ * \brief       Returns the probability of reaching zero from 'starting'
+ * \param       peakNum: peak absorbing state
+ * \param       starting: initial conditions
+ * \return      probability as per brief
+*/
+double optimisedgambler(int peakNum, int starting){
+    return (((double)1/(double)peakNum) * ((double)peakNum-(double)starting));
+}
+
 int main(){
-    int peakNum = 5;
-    int wanted = 3;
+    int peakNum = 300;
+    int wanted = 100;
     double* arr = gambler(peakNum);
     
 
     printf("Val at %d: %lf\n", wanted, arr[wanted]);
+    printf("optimised Val at %d: %lf\n", wanted, optimisedgambler(peakNum, wanted));
     free(arr);
 }

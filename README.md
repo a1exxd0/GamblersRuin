@@ -11,3 +11,6 @@ If you reach 'peakNum', this is an absorbing state. Zero is also an absorbing st
 I made this with the purpose of solving a variation of a university assignment problem computationally. Since time complexity of this algorithm is big-theta(n), it is very scalable and precise.
 
 In lectures it was proved in the specific equal probability case where there was no upper bound, that the probability of reaching 0 from any 2 consecutive states was equal. This did not apply where there was an upper bound - and I have not yet proved this. The algorithm, however, indicates that it holds regardless - an interesting observation!
+
+# Optimisations
+There is an initial 'gamblers' function which is linear in time and space. I produce a new algorithm with constant runtime and space complexity - check the 'gamblersruin.pdf' file for how and why!
